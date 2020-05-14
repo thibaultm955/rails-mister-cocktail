@@ -1,0 +1,10 @@
+<h1> Add a dose for <%=@cocktail.name%> </h1>
+
+<%= form_for [@cocktail, @dose] do |f|%>
+  <%= f.label(:description, "Description") %>
+  <%= f.text_field :description%> <br>
+  <%= f.label(:ingredient_id, "Ingredient")%>
+  <%= f.collection_select :ingredient_id, Ingredient.all, :id, :name %><br>
+  <%= f.submit "Add Ingredient", class: "btn btn-primary" %>
+<% end %>
+

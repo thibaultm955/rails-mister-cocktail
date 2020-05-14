@@ -1,0 +1,5 @@
+<%= form_with model: @cocktail do |f| %>
+  <%= f.label(:name, "Name") %>
+  <%= f.text_field :name%>
+  <%= f.submit "Create Cocktail", class: "btn btn-primary" %>
+<% end %>
